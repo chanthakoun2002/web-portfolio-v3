@@ -1,0 +1,40 @@
+:root {
+  --bg-dark: #0f1115;
+  --surface-dark: #171a21;
+  --border-dark: #2a2f3a;
+  --accent: #4fc3f7;
+}
+
+/* Body */
+body {
+  background: var(--bg-dark);
+  color: #e4e6eb;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Section spacing */
+section {
+  padding: 80px 40px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+h1, h2, h3 {
+  letter-spacing: 0.5px;
+}
+
+button {
+  transition: 0.25s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+section {
+  border-bottom: 1px solid var(--border-dark);
+}

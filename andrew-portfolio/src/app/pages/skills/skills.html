@@ -1,0 +1,31 @@
+<section id="skills" class="skills-section">
+  <h2>Skills & Technologies</h2>
+
+  <h3>Languages</h3>
+  <mat-chip-set class="chip-group">
+    @for (skill of languages; track skill) {
+      <mat-chip>{{ skill }}</mat-chip>
+    }
+  </mat-chip-set>
+
+  <h3>Frameworks</h3>
+  <div class="chip-group">
+    @for (skill of frameworks; track skill) {
+      <mat-chip>{{ skill }}</mat-chip>
+    }
+  </div>
+
+  <h3>Databases</h3>
+  <div class="chip-group">
+    @for (skill of databases; track skill) {
+      <mat-chip>{{ skill }}</mat-chip>
+    }
+  </div>
+
+  <h3>Core Skills</h3>
+  <div class="chip-group">
+    @for (skill of core; track skill) {
+      <mat-chip>{{ skill }}</mat-chip>
+    }
+  </div>
+</section>

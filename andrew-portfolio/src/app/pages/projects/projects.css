@@ -1,0 +1,13 @@
+mat-card {
+  background: var(--surface-dark);
+  color: #e4e6eb;
+  border-radius: 12px;
+  border: 1px solid var(--border-dark);
+  transition: 0.25s ease;
+}
+
+/* Hover effect */
+mat-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
