@@ -4,15 +4,74 @@
 }
 
 .about-content {
-  max-width: 800px;
+  max-width: 900px;
   margin: auto;
 }
 
-.profile-image img {
-  width: 150px;
-  border-radius: 50%;
-  margin: 20px 0;
+
+.profile-image {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+  animation: fadeInUp 1s ease;
 }
+
+.profile-ring {
+  position: relative;
+  padding: 6px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4fc3f7, #7c4dff);
+  transition: all 0.35s ease;
+}
+
+.profile-ring img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  background: #111;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* Glow */
+.profile-ring::before {
+  content: "";
+  position: absolute;
+  inset: -12px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(79,195,247,0.35),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+/* Hover animation */
+.profile-ring:hover {
+  transform: translateY(-4px) scale(1.03);
+}
+
+.profile-ring:hover::before {
+  opacity: 1;
+}
+
+/* Responsive size */
+@media (min-width: 768px) {
+  .profile-ring img {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+.about-content p {
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
 
 .education-grid {
   display: flex;
@@ -21,16 +80,32 @@
   flex-wrap: wrap;
 }
 
+/* Cards */
 mat-card {
   background: var(--surface-dark);
   color: #e4e6eb;
-  border-radius: 12px;
+  border-radius: 14px;
   border: 1px solid var(--border-dark);
+  padding: 20px;
   transition: 0.25s ease;
+  backdrop-filter: blur(6px);
 }
 
-/* Hover effect */
+/* Hover */
 mat-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
   border-color: var(--accent);
+  box-shadow: 0 10px 30px rgba(79,195,247,0.15);
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
