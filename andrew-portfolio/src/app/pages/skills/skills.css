@@ -26,12 +26,14 @@
 
 mat-chip {
   background: #1a1f2b;
-  color: #e4e6eb;
+  color: #ffffff;
+  font-style: italic;
   border: 1px solid #2f3545;
   border-radius: 8px;
   font-weight: 500;
   transition: all 0.2s ease;
 }
+
 
 .skills-section mat-chip {
   margin: 6px;

@@ -52,9 +52,20 @@
 }
 
 /* Title */
+.hero h2 {
+  font-size: clamp(2rem, 5vw, 3.6rem);
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 0px;
+  background: linear-gradient(90deg, #ffffff, #4fc3f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .hero h1 {
   font-size: clamp(2.8rem, 5vw, 3.6rem);
   font-weight: 700;
+  margin-top: 0;
   margin-bottom: 10px;
   background: linear-gradient(90deg, #ffffff, #4fc3f7);
   -webkit-background-clip: text;
